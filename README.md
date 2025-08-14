@@ -1,1 +1,0 @@
-# YA_National_Meet
