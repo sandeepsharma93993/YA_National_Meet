@@ -3,120 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <title>National Meet Program Sheet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
+    /* General Reset */
+    * {
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 {
-      text-align: center;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      padding-top: 60px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    nav h1 {
+      font-size: 20px;
       color: #2c3e50;
     }
-    .day-section {
-      margin-bottom: 40px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
     }
-    .day-section h2 {
-      background: linear-gradient(90deg, #3498db, #2980b9);
-      color: #fff;
-      padding: 10px;
-      border-radius: 4px;
+    nav ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #34495e;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .tab-button {
+      background-color: #e3f2fd;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .tab-button.active {
+      background-color: #90caf9;
+      color: white;
+    }
+    .tab-button:hover {
+      background-color: #bbdefb;
+    }
+
+    /* Tables */
+    .tab-content {
+      display: none;
+      max-width: 900px;
+      margin: auto;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     th, td {
       padding: 12px 15px;
       text-align: left;
     }
     th {
-      background: #2980b9;
-      color: #fff;
-      position: sticky;
-      top: 0;
+      background-color: #90caf9;
+      color: white;
     }
-    tbody tr:nth-child(even) {
-      background: #ecf0f1;
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
     }
-    tbody tr:hover {
-      background: #d0e4f5;
+    tr:hover {
+      background-color: #f1f8ff;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav h1 {
+        font-size: 16px;
+      }
+      .tab-button {
+        padding: 8px 15px;
+        font-size: 12px;
+      }
     }
   </style>
 </head>
 <body>
 
-<h1>National Meet Program Sheet</h1>
+  <!-- Navigation Bar -->
+  <nav>
+    <h1>National Meet 2025</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#aug16">16 August</a></li>
+      <li><a href="#aug17">17 August</a></li>
+    </ul>
+  </nav>
 
-<div class="day-section">
-  <h2>📅 16 August</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>S.No.</th>
-        <th>Time</th>
-        <th>Event</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>9.00 AM - 10.00 AM</td><td>Welcome & Registration + Breakfast</td></tr>
-      <tr><td>2</td><td>10.00 AM - 10.05 AM</td><td>Welcome by Emcee</td></tr>
-      <tr><td>3</td><td>10.05 AM - 10.30 AM</td><td>Maharajji's Video Satsang</td></tr>
-      <tr><td>4</td><td>10.30 AM - 11.00 AM</td><td>Meditation Session</td></tr>
-      <tr><td>5</td><td>11.00 AM - 11.05 AM</td><td>Welcome Address</td></tr>
-      <tr><td>6</td><td>11.05 AM - 11.20 AM</td><td>Ice Breaking Activity</td></tr>
-      <tr><td>7</td><td>11.20 AM - 11.50 AM</td><td>Motivational Talk by Shalika Budhiraja — Shift how you approach Sewa & how to Manage Time</td></tr>
-      <tr><td>8</td><td>11.50 AM - 12.00 PM</td><td>RC Talk — Zone 2 & Zone 3</td></tr>
-      <tr><td>9</td><td>12.00 PM - 12.10 PM</td><td>Veggie Fest Video</td></tr>
-      <tr><td>10</td><td>12.10 PM - 12.40 PM</td><td>Team Building Activity — Passing the Parcel</td></tr>
-      <tr><td>11</td><td>12.40 PM - 12.45 PM</td><td>RC Talk — Zone 5</td></tr>
-      <tr><td>12</td><td>12.45 PM - 1.00 PM</td><td>Motivational Talk — How to represent mission — Surinder Singh</td></tr>
-      <tr><td>13</td><td>1.00 PM - 2.00 PM</td><td>Lunch</td></tr>
-      <tr><td>14</td><td>2.00 PM - 2.10 PM</td><td>BDC and Organ Donation Video</td></tr>
-      <tr><td>15</td><td>2.10 PM - 2.20 PM</td><td>RC Talk — Zone 6 & Zone 7</td></tr>
-      <tr><td>16</td><td>2.20 PM - 2.30 PM</td><td>Rooh ki Pukar Promotion</td></tr>
-      <tr><td>17</td><td>2.30 PM - 2.40 PM</td><td>RC Talk — Zone 8 & Zone 11</td></tr>
-      <tr><td>18</td><td>2.40 PM - 4.40 PM</td><td>Cultural Program from Zones</td></tr>
-      <tr><td>19</td><td>4.40 PM - 5.30 PM</td><td>Veggie Fest</td></tr>
-      <tr><td>20</td><td>5.30 PM - 6.00 PM</td><td>Story of Grace</td></tr>
-      <tr><td>21</td><td>5.40 PM - 5.50 PM</td><td>Innergy Promotion</td></tr>
-      <tr><td>22</td><td>6.00 PM - 6.05 PM</td><td>Welcome of Management Members — G.S. Grover Uncle Ji, Shree Ashwani Sachdeva Uncle Ji and other mgt members</td></tr>
-      <tr><td>23</td><td>6.05 PM - 6.20 PM</td><td>Presentation Video of Zone Visit</td></tr>
-      <tr><td>24</td><td>6.20 PM - 6.40 PM</td><td>Encouraging words by GS Grover Uncle Ji</td></tr>
-      <tr><td>25</td><td>6.40 PM - 7.00 PM</td><td>Encouraging words by Ashwani Sachdeva Uncle Ji</td></tr>
-      <tr><td>26</td><td>7.00 PM - 7.05 PM</td><td>Vote of Thanks to Management Members — G.S. Grover Uncle Ji, Shree Ashwani Sachdeva Uncle Ji and other mgt members</td></tr>
-      <tr><td>27</td><td>7.05 PM - 7.15 PM</td><td>Group Photograph</td></tr>
-      <tr><td>28</td><td>7.15 PM Onwards</td><td>Dinner</td></tr>
-    </tbody>
-  </table>
-</div>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab('aug16')">16 August</button>
+    <button class="tab-button" onclick="openTab('aug17')">17 August</button>
+  </div>
 
-<div class="day-section">
-  <h2>📅 17 August</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>S.No.</th>
-        <th>Time</th>
-        <th>Event</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>7.00 AM - 8.00 AM</td><td>Meditation Session in Sawan Ashram</td></tr>
-      <tr><td>2</td><td>8.00 AM - 9.00 AM</td><td>Breakfast</td></tr>
-      <tr><td>3</td><td>9.00 AM</td><td>Departure from Sawan Ashram</td></tr>
-      <tr><td>4</td><td>10.30 AM - 11.00 AM</td><td>Satsang & Meditation</td></tr>
-      <tr><td>5</td><td>11.00 AM - 11.30 AM</td><td>Address by National Council + Address by NFCs</td></tr>
-      <tr><td>6</td><td>11.30 AM - 12.30 PM</td><td>Sant Darshan Singh Ji Dham Sewa Area Visit</td></tr>
-      <tr><td>7</td><td>12.30 PM - 1.00 PM</td><td>September Program Planning of Sewa Areas — Group Discussion with NFCs & Zone FCs (Introduction of NFC and what they are expecting from Zones)</td></tr>
-      <tr><td>8</td><td>1.00 PM - 1.30 PM</td><td>Meeting with NFCs, FCs, SC, and CC with Shivani, Rachneet & Shalini Di</td></tr>
-      <tr><td>9</td><td>1.30 PM onwards</td><td>Lunch</td></tr>
-    </tbody>
-  </table>
-</div>
+  <!-- 16 August Program -->
+  <div id="aug16" class="tab-content active">
+    <table>
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Time</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>9.00 AM - 10.00 AM</td><td>Welcome & Registration + Breakfast</td></tr>
+        <tr><td>2</td><td>10.00 AM - 10.05 AM</td><td>Welcome by Emcee</td></tr>
+        <tr><td>3</td><td>10.05 AM - 10.30 AM</td><td>Maharajji's Video Satsang</td></tr>
+        <tr><td>4</td><td>10.30 AM - 11.00 AM</td><td>Meditation Session</td></tr>
+        <tr><td>5</td><td>11.00 AM - 11.05 AM</td><td>Welcome Address</td></tr>
+        <tr><td>6</td><td>11.05 AM - 11.20 AM</td><td>Ice Breaking Activity</td></tr>
+        <tr><td>7</td><td>11.20 AM - 11.50 AM</td><td>Motivational Talk by Shalika Budhiraja — Shift how you approach Sewa & how to Manage Time</td></tr>
+        <tr><td>8</td><td>11.50 AM - 12.00 PM</td><td>RC Talk — Zone 2 & Zone 3</td></tr>
+        <tr><td>9</td><td>12.00 PM - 12.10 PM</td><td>Veggie Fest Video</td></tr>
+        <tr><td>10</td><td>12.10 PM - 12.40 PM</td><td>Team Building Activity — Passing the Parcel</td></tr>
+        <tr><td>11</td><td>12.40 PM - 12.45 PM</td><td>RC Talk — Zone 5</td></tr>
+        <tr><td>12</td><td>12.45 PM - 1.00 PM</td><td>Motivational Talk — How to represent mission — Surinder Singh</td></tr>
+        <tr><td>13</td><td>1.00 PM - 2.00 PM</td><td>Lunch</td></tr>
+        <tr><td>14</td><td>2.00 PM - 2.10 PM</td><td>BDC and Organ Donation Video</td></tr>
+        <tr><td>15</td><td>2.10 PM - 2.20 PM</td><td>RC Talk — Zone 6 & Zone 7</td></tr>
+        <tr><td>16</td><td>2.20 PM - 2.30 PM</td><td>Rooh ki Pukar Promotion</td></tr>
+        <tr><td>17</td><td>2.30 PM - 2.40 PM</td><td>RC Talk — Zone 8 & Zone 11</td></tr>
+        <tr><td>18</td><td>2.40 PM - 4.40 PM</td><td>Cultural Program from Zones</td></tr>
+        <tr><td>19</td><td>4.40 PM - 5.30 PM</td><td>Veggie Fest</td></tr>
+        <tr><td>20</td><td>5.30 PM - 6.00 PM</td><td>Story of Grace</td></tr>
+        <tr><td>21</td><td>5.40 PM - 5.50 PM</td><td>Innergy Promotion</td></tr>
+        <tr><td>22</td><td>6.00 PM - 6.05 PM</td><td>Welcome of Management Members — G.S. Grover Uncle Ji, Shree Ashwani Sachdeva Uncle Ji and other mgt members</td></tr>
+        <tr><td>23</td><td>6.05 PM - 6.20 PM</td><td>Presentation Video of Zone Visit</td></tr>
+        <tr><td>24</td><td>6.20 PM - 6.40 PM</td><td>Encouraging words by GS Grover Uncle Ji</td></tr>
+        <tr><td>25</td><td>6.40 PM - 7.00 PM</td><td>Encouraging words by Ashwani Sachdeva Uncle Ji</td></tr>
+        <tr><td>26</td><td>7.00 PM - 7.05 PM</td><td>Vote of Thanks to Management Members — G.S. Grover Uncle Ji, Shree Ashwani Sachdeva Uncle Ji and other mgt members</td></tr>
+        <tr><td>27</td><td>7.05 PM - 7.15 PM</td><td>Group Photograph</td></tr>
+        <tr><td>28</td><td>7.15 PM Onwards</td><td>Dinner</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 17 August Program -->
+  <div id="aug17" class="tab-content">
+    <table>
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Time</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>7.00 AM - 8.00 AM</td><td>Meditation Session in Sawan Ashram</td></tr>
+        <tr><td>2</td><td>8.00 AM - 9.00 AM</td><td>Breakfast</td></tr>
+        <tr><td>3</td><td>9.00 AM</td><td>Departure from Sawan Ashram</td></tr>
+        <tr><td>4</td><td>10.30 AM - 11.00 AM</td><td>Satsang & Meditation</td></tr>
+        <tr><td>5</td><td>11.00 AM - 11.30 AM</td><td>Address by National Council + Address by NFCs</td></tr>
+        <tr><td>6</td><td>11.30 AM - 12.30 PM</td><td>Sant Darshan Singh Ji Dham Sewa Area Visit</td></tr>
+        <tr><td>7</td><td>12.30 PM - 1.00 PM</td><td>September Program Planning of Sewa Areas — Group Discussion with NFCs & Zone FCs</td></tr>
+        <tr><td>8</td><td>1.00 PM - 1.30 PM</td><td>Meeting with NFCs, FCs, SC, and CC with Shivani, Rachneet & Shalini Di</td></tr>
+        <tr><td>9</td><td>1.30 PM onwards</td><td>Lunch</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function openTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
