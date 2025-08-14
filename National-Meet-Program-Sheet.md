@@ -1,4 +1,6 @@
-# National Meet Program Sheet - 16 August
+# National Meet Program Sheet
+
+## 16 August
 
 | S.No. | Time                     | Event |
 |-------|--------------------------|-------|
@@ -30,3 +32,19 @@
 | 26    | 7.00 PM - 7.05 PM         | Vote of Thanks to Management Members - G.S. Grover Uncle Ji, Shree Ashwani Sachdeva Uncle Ji and other mgt members |
 | 27    | 7.05 PM - 7.15 PM         | Group Photograph |
 | 28    | 7.15 PM Onwards           | Dinner |
+
+---
+
+## 17 August
+
+| S.No. | Time                     | Event |
+|-------|--------------------------|-------|
+| 1     | 7.00 AM - 8.00 AM         | Meditation Session in Sawan Ashram |
+| 2     | 8.00 AM - 9.00 AM         | Breakfast |
+| 3     | 9.00 AM                   | Departure from Sawan Ashram |
+| 4     | 10.30 AM - 11.00 AM       | Satsang & Meditation |
+| 5     | 11.00 AM - 11.30 AM       | Address by National Council + Address by NFCs |
+| 6     | 11.30 AM - 12.30 PM       | Sant Darshan Singh Ji Dham Sewa Area Visit |
+| 7     | 12.30 PM - 1.00 PM        | September Program Planning of Sewa Areas - Group Discussion with NFCs & Zone FCs (Introduction of NFC and what they are expecting from Zones) |
+| 8     | 1.00 PM - 1.30 PM         | Meeting with NFCs, FCs, SC, and CC with Shivani, Rachneet & Shalini Di |
+| 9     | 1.30 PM onwards           | Lunch |
